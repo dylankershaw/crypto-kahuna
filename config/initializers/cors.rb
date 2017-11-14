@@ -7,9 +7,9 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins '*'
+    origins '*' # allows requests from ALL origins, change later on to just accept the frontend repo
 
-    resource '*', # allows requests from ALL origins, change later on to just accept the frontend repo
+    resource '*', 
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
