@@ -10,9 +10,9 @@ class Api::V1::UsersController < ApplicationController
         render json: @user
     end
 
-    # def create
-    #     @user = User.create(user_params)
-    # end
+    def create
+        @user = User.create(user_params)
+    end
 
     def update
         @user = User.find(params[:id])
