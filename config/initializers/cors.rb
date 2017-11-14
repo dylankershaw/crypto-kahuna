@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins '*' # allows requests from ALL origins, change later on to just accept the frontend repo
+    origins 'https://crypto-kahuna.herokuapp.com/'
 
     resource '*', 
       headers: :any,
