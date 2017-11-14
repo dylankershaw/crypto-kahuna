@@ -10,6 +10,14 @@ class Api::V1::HoldingsController < ApplicationController
         render json: @holding
     end
 
+    def create
+        @holding = Holding.create(holding_params)
+    end
+
+    def destroy
+        Holding.find(params[:id]).destroy
+    end
+
     def update
         @holding = Holding.find(params[:id])
 

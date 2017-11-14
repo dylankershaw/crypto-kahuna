@@ -14,6 +14,10 @@ class Api::V1::UsersController < ApplicationController
         @user = User.create(user_params)
     end
 
+    def destroy
+        User.find(params[:id]).destroy
+    end
+
     def update
         @user = User.find(params[:id])
 

@@ -10,6 +10,14 @@ class Api::V1::PortfoliosController < ApplicationController
         render json: @portfolio
     end
 
+    def create
+        @portfolio = Portfolio.create(portfolio_params)
+    end
+
+    def destroy
+        Portfolio.find(params[:id]).destroy
+    end
+
     def update
         @portfolio = Portfolio.find(params[:id])
 
