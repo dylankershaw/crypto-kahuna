@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show, :update]
       resources :portfolios, only: [:index, :show, :update]
+      resources :holdings, only: [:index, :show, :update]
     end
   end
 end
