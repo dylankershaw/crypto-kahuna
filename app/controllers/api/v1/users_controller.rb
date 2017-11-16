@@ -31,7 +31,7 @@ class Api::V1::UsersController < ApplicationController
 
     private
     def user_params
-        params.permit(:name, :cash)
+        params.permit(:name, :cash, :cryptokey)
     end
 
 end
