@@ -1,4 +1,8 @@
 class Api::V1::UsersController < ApplicationController
+    
+    include ActionController::HttpAuthentication::Basic::ControllerMethods
+
+    http_basic_authenticate_with name: "", password: "elHornoOfMealPal"
 
     def index
         @users = User.all
