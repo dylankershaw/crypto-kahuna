@@ -23,10 +23,11 @@ module CryptoKahunaApiNew
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'crypto-kahuna.herokuapp.com/'
         resource '*', :headers => :any, :methods => [:get, :post, :put, :patch, :delete, :options, :head]
       end
     end
+    
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
